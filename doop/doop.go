@@ -30,6 +30,28 @@ func main() {
 				result := Itoa(intVal1 + intVal2)
 				os.Stdout.WriteString(result)
 			}
+			if oper == "*" {
+				result := Itoa(intVal1 * intVal2)
+				os.Stdout.WriteString(result)
+			}
+			if oper == "-" {
+				result := Itoa(intVal1 - intVal2)
+				os.Stdout.WriteString(result)
+			}
+			if oper == "/" {
+				result := "No division by 0"
+				os.Stdout.WriteString(result)
+			} else if oper == "/" && intVal2 == 0 {
+				result := "No division by 0"
+				os.Stdout.WriteString(result)
+			} 
+			if oper == "%" && intVal2 != 0 {
+				result := Itoa(intVal1%intVal2)
+				os.Stdout.WriteString(result)
+			} else  if oper == "%" && intVal2 == 0 {
+				result := "NO modolu by 0"
+				os.Stdout.WriteString(result)
+			}
 		}
 	}
 }

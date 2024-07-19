@@ -4,7 +4,7 @@ The display will be in the same order that the characters appear on the command 
 
 If the number of arguments is different from 2, then the program displays a newline ('\n').
 Usage
-
+````
 $ go run . zpadinton paqefwtdjetyiytjneytjoeyjnejeyj | cat -e
 zpadintoqefwjy$
 $
@@ -18,3 +18,4 @@ $ go run . | cat -e
 $
 $ go run . rien | cat -e
 $
+```

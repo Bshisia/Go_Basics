@@ -38,17 +38,18 @@ func main() {
 				result := Itoa(intVal1 - intVal2)
 				os.Stdout.WriteString(result)
 			}
-			if oper == "/" {
+			if oper == "/" && intVal2 == 0 {
 				result := "No division by 0"
 				os.Stdout.WriteString(result)
-			} else if oper == "/" && intVal2 == 0 {
-				result := "No division by 0"
+
+			} else if oper == "/" {
+				result := Itoa(intVal1 / intVal2)
 				os.Stdout.WriteString(result)
-			} 
+			}
 			if oper == "%" && intVal2 != 0 {
-				result := Itoa(intVal1%intVal2)
+				result := Itoa(intVal1 % intVal2)
 				os.Stdout.WriteString(result)
-			} else  if oper == "%" && intVal2 == 0 {
+			} else if oper == "%" && intVal2 == 0 {
 				result := "NO modolu by 0"
 				os.Stdout.WriteString(result)
 			}
@@ -70,7 +71,7 @@ func Itoa(nb int) string {
 	var result string
 	for nb > 0 {
 		digit := nb % 10
-		result = string('0' + digit) + result
+		result = string('0'+digit) + result
 		nb /= 10
 	}
 	return result

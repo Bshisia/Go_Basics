@@ -1,6 +1,10 @@
 package main
 
-import "os"
+import (
+	"os"
+
+	"github.com/01-edu/z01"
+)
 
 func main() {
 	if len(os.Args) != 2 {
@@ -13,8 +17,11 @@ func main() {
 
 func TabMult(n int) {
 	for i := 1; i <= 9; i++ {
-		line := Itoa(i) + " "+ "X" + " " + Itoa(n) + " " + "=" + " " + Itoa(i*n) + "\n"
-		os.Stdout.WriteString(line)
+		line := Itoa(i) + " " + "X" + " " + Itoa(n) + " " + "=" + " " + Itoa(i*n)
+		for _, char := range line {
+			z01.PrintRune(char)
+		}
+		z01.PrintRune('\n')
 	}
 }
 

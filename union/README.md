@@ -6,11 +6,9 @@ Write a program that takes two `string` and displays, without doubles, the chara
 
 The display will be in the same order that the characters appear on the command line and will be followed by a newline (`'\n'`).
 
-If the number of arguments is different from 2, then the program displays a newline (`'\n'`).
+If the number of arguments is different from 2, then the program displays a newline ('\n').
+Usage
 
-### Usage
-
-```console
 $ go run . zpadinton paqefwtdjetyiytjneytjoeyjnejeyj | cat -e
 zpadintoqefwjy$
 $
@@ -24,4 +22,3 @@ $ go run . | cat -e
 $
 $ go run . rien | cat -e
 $
-```

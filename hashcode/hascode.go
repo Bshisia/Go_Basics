@@ -15,7 +15,7 @@ func HashCode(dec string) string {
 		hashValue := (asciiValue + length) % 127
 
 		// Ensure the result is within the printable ASCII range
-		if hashValue < 32 {
+		if hashValue < 32 || hashValue > 126{
 			hashValue += 33
 		}
 
